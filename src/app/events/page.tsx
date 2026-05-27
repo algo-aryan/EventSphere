@@ -72,10 +72,8 @@ export default function DiscoveryHubPage() {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Filter className="h-4 w-4" />
-              </Button>
+            <SheetTrigger render={<Button variant="outline" size="icon" />}>
+              <Filter className="h-4 w-4" />
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
@@ -85,7 +83,7 @@ export default function DiscoveryHubPage() {
               <div className="py-6 space-y-6">
                 <div className="space-y-2">
                   <Label>Category</Label>
-                  <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+                  <Select value={categoryFilter} onValueChange={(val) => setCategoryFilter(val || "all")}>
                     <SelectTrigger>
                       <SelectValue placeholder="All Categories" />
                     </SelectTrigger>

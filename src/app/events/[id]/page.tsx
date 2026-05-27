@@ -211,7 +211,7 @@ export default function EventDetailPage() {
           <div className="sticky top-24 space-y-6">
             <Card className="border-primary/50 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-3xl">{event.price}</CardTitle>
+                <CardTitle className="text-3xl">{event.ticketTypes?.[0]?.price === 0 ? "Free" : "$" + (event.ticketTypes?.[0]?.price?.toFixed(2) || "0.00")}</CardTitle>
                 <CardDescription>General Admission Ticket</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">

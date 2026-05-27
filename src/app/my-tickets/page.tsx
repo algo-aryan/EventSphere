@@ -138,11 +138,9 @@ export default function MyTicketsPage() {
                             <p className="font-bold">{contact.attendeeName}</p>
                             <p className="text-xs text-muted-foreground mt-1">Attending: {eventTitle}</p>
                           </div>
-                          <Button variant="outline" size="sm" asChild>
-                            <a href={`https://linkedin.com/search/results/all/?keywords=${encodeURIComponent(contact.attendeeName)}`} target="_blank" rel="noopener noreferrer">
-                              Connect
-                            </a>
-                          </Button>
+                          <a href={`https://linkedin.com/search/results/all/?keywords=${encodeURIComponent(contact.attendeeName)}`} target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" size="sm">Connect</Button>
+                          </a>
                         </CardContent>
                       </Card>
                     )

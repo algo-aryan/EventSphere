@@ -25,19 +25,19 @@ const formSchema = z.object({
   title: z.string().min(2, "Title must be at least 2 characters."),
   category: z.string().min(1, "Please select a category."),
   date: z.date({
-    required_error: "A date of event is required.",
+    message: "A date of event is required.",
   }),
-  isOnline: z.boolean().default(false),
+  isOnline: z.boolean(),
   venue: z.string().optional(),
   bulletPoints: z.string().min(10, "Please provide some basic bullet points for the AI."),
   aiDescription: z.string().optional(),
-  ticketType: z.string().default("PAID"),
+  ticketType: z.string(),
   price: z.string().optional(),
   capacity: z.string().min(1, "Capacity is required."),
-  hasEarlyBird: z.boolean().default(false),
+  hasEarlyBird: z.boolean(),
   earlyBirdPrice: z.string().optional(),
   earlyBirdExpiry: z.date().optional(),
-  hasDiscountCode: z.boolean().default(false),
+  hasDiscountCode: z.boolean(),
   discountCode: z.string().optional(),
   discountPercentage: z.string().optional(),
 })
@@ -204,7 +204,6 @@ export default function CreateEventPage() {
                           disabled={(date) =>
                             date < new Date(new Date().setHours(0, 0, 0, 0))
                           }
-                          initialFocus
                         />
                       </PopoverContent>
                     </Popover>
@@ -445,7 +444,6 @@ export default function CreateEventPage() {
                                   disabled={(date) =>
                                     date < new Date(new Date().setHours(0, 0, 0, 0))
                                   }
-                                  initialFocus
                                 />
                               </PopoverContent>
                             </Popover>

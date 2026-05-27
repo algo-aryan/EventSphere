@@ -37,9 +37,9 @@ export default function WishlistPage() {
         <div className="text-center py-20 border rounded-xl bg-muted/20">
           <h3 className="text-xl font-semibold">Your wishlist is empty</h3>
           <p className="text-muted-foreground mb-4">Discover new events and save them for later.</p>
-          <Button asChild>
-            <Link href="/events">Browse Events</Link>
-          </Button>
+          <Link href="/events">
+            <Button>Browse Events</Button>
+          </Link>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -77,9 +77,9 @@ export default function WishlistPage() {
                 </div>
               </CardContent>
               <CardFooter className="p-4 pt-0">
-                <Button className="w-full" variant="default" asChild>
-                  <Link href={`/events/${event.id}`}>View Details</Link>
-                </Button>
+                <Link href={`/events/${event.id}`}>
+                  <Button className="w-full" variant="default">View Details</Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
