@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EventSphere 🎟️
 
-## Getting Started
+EventSphere is a modern, full-stack event management and ticketing platform designed for both organizers and attendees. Built with Next.js 15, Tailwind CSS, and Shadcn UI, it offers a seamless experience from event discovery to ticket purchase and on-site check-in.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### For Attendees
+- **🔍 Advanced Discovery Hub**: Filter events by category, city, date, and price. 
+- **🤖 AI-Powered Recommendations**: Get personalized event suggestions based on your past ticket purchases.
+- **🛒 Multi-Ticket Checkout**: Purchase different tiers of tickets (e.g., VIP, General Admission) simultaneously.
+- **❤️ Wishlist & Reminders**: Save events to your wishlist and receive notifications before tickets sell out.
+- **🤝 Attendee Networking**: Opt-in to share your LinkedIn profile and connect with other verified attendees.
+- **⭐ Post-Event Community**: Leave public reviews and star ratings, and submit private feedback to organizers.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### For Organizers
+- **📊 Real-time Dashboard**: Track ticket sales, revenue, and attendance metrics at a glance.
+- **📝 Event Creation**: Easily publish new events with custom ticket tiers and discount codes.
+- **📋 Attendee Management**: View a dynamic table of all attendees across events.
+- **📥 CSV Exports**: Download your entire attendee list for offline access with a single click.
+- **📱 QR Code Check-in**: A built-in scanner interface to validate cryptographic QR tickets at the door.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS 4 & Shadcn UI
+- **State Management**: Zustand
+- **Icons**: Lucide React
+- **Forms**: React Hook Form & Zod
+- **Utilities**: `qrcode.react` (Ticketing), `recharts` (Analytics), `sonner` (Toasts)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) installed.
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/algo-aryan/EventSphere.git
+   cd EventSphere
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📂 Project Structure
+- `/src/app`: Next.js App Router pages (Dashboard, Checkout, Events, etc.)
+- `/src/components`: Reusable UI components (Shadcn UI, Navbars, Cards)
+- `/src/lib`: Global Zustand store (`store.ts`) and utility functions
+- `/supabase`: Database schema definitions (if applicable)
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request if you'd like to improve EventSphere.
+
+## 📄 License
+This project is licensed under the MIT License.
